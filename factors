@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+from sys import argv
+import math
+from fact import fact
+
+def factors(filename):
+    with open(filename, encoding="utf-8") as my_file:
+        for i in my_file.readlines():
+            n = int(i)
+            result = fact(n)
+
+if __name__ == "__main__":
+    factors(argv[1])
